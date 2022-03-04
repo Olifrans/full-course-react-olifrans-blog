@@ -1,21 +1,22 @@
 import { useState } from "react";
+import ListarBlog from "./ListarBlog";
 
 const Home = () => {
   const [blogs, setBlogs] = useState([
     {
-      title: "Meu site teste",
+      title: "Meu Teste - 01",
       bodY: "Tecnológia da informação",
       author: "Olifrans",
       id: 1,
     },
     {
-      title: "Meu site teste",
-      bodY: "Tecnológia da informação",
+      title: "Meu Teste - 02",
+      bodY: "Java EE e Sql Server",
       author: "Pedro",
       id: 2,
     },
     {
-      title: "Meu site teste",
+      title: "Meu Teste - 03",
       bodY: "React e DotNet",
       author: "Mario André",
       id: 3,
@@ -26,18 +27,8 @@ const Home = () => {
     <div className="home">
       <p> {Math.random() * 1.666666666} </p>
       <h2>ITI - Instituto Tecnológico Inovação</h2>
-
-
-      {blogs.map((blog)=>(
-        <div className="blog-preview" key={blog.id}>
-          <h2>{blog.title}</h2>
-          <p>Esta mensagem foi enviada de: {blog.author}</p>
-        </div>
-
-      ))}
-
-
-
+      <br></br>      
+      <ListarBlog blogs={blogs} title="Área de Mensagens!" />
     </div>
   );
 };
