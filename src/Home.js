@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ListarMsn from "./ListarMsn";
 
 const Home = () => {
   const [mensagens, setMensagens] = useState([
     {
-      title: "Curso de MPython",
+      title: "Curso de Python",
       bodY: "Python com BI",
       author: "Olifrans",
       id: 1,
@@ -16,19 +16,19 @@ const Home = () => {
       id: 2,
     },
     {
-      title: "Curso de  Back e Front End",
+      title: "Curso de  BackEnd e FrontEnd",
       bodY: "React e DotNet",
       author: "Mario André",
       id: 3,
     },
     {
-      title: "Curso de Agile",
+      title: "Curso de Ágile",
       bodY: "Agile com React e DotNet",
       author: "Olifrans",
       id: 4,
     },
     {
-      title: "Curso de  Scrum",
+      title: "Curso de  Scrum Master",
       bodY: "Scrum e DotNet",
       author: "Olifrans",
       id: 5,
@@ -40,6 +40,12 @@ const Home = () => {
     setMensagens(newMensagem);
   };
 
+  useEffect(() => {
+    console.log("use effect ran");
+  },[]);
+
+
+  
   return (
     <div className="home">
       <p> {Math.random() * 1.666666666} </p>
@@ -52,10 +58,14 @@ const Home = () => {
         handleDelete={handleDelete}
       />
 
-      <ListarMsn
+
+      <button onClick={() => setName("Francisco")}>Mudar Nome</button>
+      <p>{name}</p>
+
+      {/* <ListarMsn
         mensagens={mensagens.filter((msn) => msn.author === "Olifrans")}
         title="Mensagens de Olifrans!"
-      />
+      /> */}
     </div>
   );
 };
