@@ -1,8 +1,8 @@
 import { useState } from "react";
-import ListarBlog from "./ListarBlog";
+import ListarMsn from "./ListarMsn";
 
 const Home = () => {
-  const [blogs, setBlogs] = useState([
+  const [mensagens, setMensagens] = useState([
     {
       title: "Curso de MPython",
       bodY: "Python com BI",
@@ -35,15 +35,25 @@ const Home = () => {
     },
   ]);
 
+  const handleDelete = (id) => {
+    const newMensagem = mensagens.filter((msn) => msn.id !== id);
+    setMensagens(newMensagem);
+  };
+
   return (
     <div className="home">
       <p> {Math.random() * 1.666666666} </p>
       <h2>ITI - Instituto Tecnológico Inovação</h2>
       <br></br>
-      <ListarBlog blogs={blogs} title="Área de Mensagens!" />
 
-      <ListarBlog
-        blogs={blogs.filter((blog) => blog.author === "Olifrans")}
+      <ListarMsn
+        mensagens={mensagens}
+        title="Área de Mensagens!"
+        handleDelete={handleDelete}
+      />
+
+      <ListarMsn
+        mensagens={mensagens.filter((msn) => msn.author === "Olifrans")}
         title="Mensagens de Olifrans!"
       />
     </div>
