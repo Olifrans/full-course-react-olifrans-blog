@@ -4,6 +4,7 @@ import ListarMsn from "./ListarMsn";
 const Home = () => {
   const [mensagens, setMensagens] = useState(null);
   const [isPending, setIsPending] = useState(true);
+  const [error, setError] = useState(null);
 
   // const handleDelete = (id) => {
   //   const newMensagem = mensagens.filter((msn) => msn.id !== id);
@@ -14,11 +15,19 @@ const Home = () => {
     setTimeout(() => {
       fetch("http://localhost:8000/mensagens")
         .then((res) => {
+          if (!res.ok) {
+            throw Error("Erro ao tentar se comunicar ao Endpoint");
+          }
           return res.json();
         })
         .then((data) => {
           setMensagens(data);
           setIsPending(false);
+          setError(null);
+        })
+        .catch((err) => {
+          setIsPending(false);
+          setError(err.message);
         });
     }, 1000);
   }, []);
@@ -31,6 +40,7 @@ const Home = () => {
       <h3>ITI - Instituto Tecnológico Inovação</h3>
       <br />
 
+      {error && <div>{error}</div>}
       {isPending && <div>Loading...</div>}
 
       {mensagens && (
