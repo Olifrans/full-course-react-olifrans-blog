@@ -1,19 +1,25 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <h1>React-DotNet</h1>
+      <Link to="/">
+        <h1>React-DotNet</h1>
+      </Link>
+
       <div className="links">
-        <a href="/">Home</a>
-        <a
-          href="/create"
-          // style={{
-          //   color: "white",
-          //   backgroundColor: "#066677",
-          //   borderRadius: "7px",
-          // }}
+        <Link to="/">Home</Link>
+
+        <Link
+          to="/create"
+          style={{
+            color: "white",
+            backgroundColor: "#066677",
+            borderRadius: "7px",
+          }}
         >
           Nova-Mensagem
-        </a>
+        </Link>
       </div>
     </nav>
   );
