@@ -9,3 +9,49 @@ https://www.youtube.com/watch?v=eao7ABGFUXs&list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRi
 
 --> Start db.json:
 npx json-server --watch data/db.json --port 8000
+
+
+
+
+
+https://v5.reactrouter.com/web/guides/quick-start
+yarn add react-router-dom
+
+react-router
+npm i react-router-dom@5
+
+problema resolvido em mim
+
+npm uninstall react-router
+e
+
+npm uninstall react-router-dom
+então
+
+npm install react-router react-router-dom
+usar a versão 5.0.0
+
+
+
+O erro ocorre porque você está usando react-router v5 em vez de v6-
+
+Siga esses passos-
+
+Passo 1:
+
+npm uninstall react-router
+npm uninstall react-router-dom
+Passo 2:
+
+npm install react-router@next react-router-dom@next
+Etapa 3: reinicie seu servidor
+
+E você está pronto para ir!
+
+
+nstale react-routere react-router-domassim:
+npm install react-router@next react-router-dom@next
+
+
+
+
