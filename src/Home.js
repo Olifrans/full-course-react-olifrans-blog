@@ -47,10 +47,18 @@ const Home = () => {
 
   
   return (
-    <div className="home">
-      <p> {Math.random() * 1.666666666} </p>
-      <h2>ITI - Instituto Tecnológico Inovação</h2>
+    <div className="home">  
+
+      <h3>Resultado Randômico perfeito irracional infinito da sequência de Fibonacci.</h3>
+      <p> {Math.random() * 1.618} </p>
+      <br />
+      <h3>ITI - Instituto Tecnológico Inovação</h3>
       <br></br>
+
+
+
+
+
 
       <ListarMsn
         mensagens={mensagens}
