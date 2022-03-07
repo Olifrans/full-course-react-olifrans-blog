@@ -3,35 +3,47 @@
     {
       "title": "Curso de Python",
       "body": "Python com BI",
-      "author": "Olifrans",
+      "author": "olifrans",
       "id": 1
     },
 
     {
       "title": "Curso de Java Sql-Server",
       "body": "Java EE e Sql Server",
-      "author": "Pedro",
+      "author": "pedro",
       "id": 2
     },
 
     {
       "title": "Curso de  BackEnd e FrontEnd",
       "bodY": "React e DotNet",
-      "author": "Mario André",
+      "author": "mario",
       "id": 3
     },
 
     {
       "title": "Curso de Ágile",
       "bodY": "Agile com React e DotNet",
-      "author": "Olifrans",
+      "author": "olifrans",
       "id": 4
     },
     {
       "title": "Curso de  Scrum Master",
       "bodY": "Scrum e DotNet",
-      "author": "Olifrans",
+      "author": "olifrans",
       "id": 5
+    }
+    {
+      "title": "Curso de  BackEnd e FrontEnd",
+      "bodY": "React e DotNet",
+      "author": "mario",
+      "id": 6
+    },
+    {
+      "title": "Curso de Java Sql-Server",
+      "body": "Java EE e Sql Server",
+      "author": "pedro",
+      "id": 7
     }
   ]
 }

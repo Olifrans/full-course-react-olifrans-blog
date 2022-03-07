@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import ListarMsn from "./ListarMsn";
 import useFetch from "./useFetch";
 
@@ -20,11 +19,7 @@ const Home = () => {
       {error && <div>{error}</div>}
       {isPending && <div>Loading...</div>}
       {mensagens && (
-        <ListarMsn
-          mensagens={mensagens}
-          title="Área de Mensagens!"
-          // handleDelete={handleDelete}
-        />
+        <ListarMsn mensagens={mensagens} title="Área de Mensagens!" />
       )}
     </div>
   );

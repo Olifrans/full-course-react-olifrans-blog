@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import DetailsMsn from "./DetailsMsn";
 import Create from "./Create";
 import Home from "./Home";
 import Navbar from "./Navbar";
@@ -15,6 +16,9 @@ function App() {
             </Route>
             <Route path="/create">
               <Create />
+            </Route>
+            <Route path="/mensagen/:id">
+              <DetailsMsn />
             </Route>
           </Switch>
         </div>

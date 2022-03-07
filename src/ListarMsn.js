@@ -1,21 +1,15 @@
-//const ListarMsn = ({ mensagens, title, handleDelete }) => {
+import { Link } from "react-router-dom";
+
 const ListarMsn = ({ mensagens, title }) => {
   return (
     <div className="msn-list">
       <h2>{title}</h2>
       {mensagens.map((msn) => (
         <div className="msn-preview" key={msn.id}>
-          <h2>{msn.title}</h2>
-          <p>Esta mensagem foi enviada de: {msn.author}</p>
-
-          
-
-          {/* <button onClick={() => handleDelete(msn.id)}>
-            Deletar Mensagen
-          </button>
- */}
-
-
+          <Link to={`/mensagen/${msn.id}`}>
+            <h2>{msn.title}</h2>
+            <p>Esta mensagem foi enviada de: {msn.author}</p>
+          </Link>
         </div>
       ))}
     </div>

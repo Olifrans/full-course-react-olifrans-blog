@@ -1,3 +1,4 @@
+import { cleanup } from "@testing-library/react";
 import { useState, useEffect } from "react";
 
 const useFetch = (url) => {
@@ -6,8 +7,10 @@ const useFetch = (url) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    const abortCont = new AbortController();
+
     setTimeout(() => {
-      fetch(url)
+      fetch(url, { signal: abortCont.signal })
         .then((res) => {
           if (!res.ok) {
             throw Error("Erro ao tentar se comunicar ao Endpoint");
@@ -20,10 +23,16 @@ const useFetch = (url) => {
           setError(null);
         })
         .catch((err) => {
-          setIsPending(false);
-          setError(err.message);
+          if (err.name === "AbortError") {
+            console.log("fatch aborted");
+          } else {
+            setIsPending(false);
+            setError(err.message);
+          }
         });
-    }, 1000);
+    }, 300);
+
+    return () => abortCont.abort();
   }, [url]);
 
   return {
