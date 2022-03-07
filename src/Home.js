@@ -2,10 +2,8 @@ import { useState, useEffect } from "react";
 import ListarMsn from "./ListarMsn";
 
 const Home = () => {
-
-
-
   const [mensagens, setMensagens] = useState(null);
+  const [isPending, setIsPending] = useState(true);
 
   // const handleDelete = (id) => {
   //   const newMensagem = mensagens.filter((msn) => msn.id !== id);
@@ -13,13 +11,16 @@ const Home = () => {
   // };
 
   useEffect(() => {
-    fetch("http://localhost:8000/mensagens")
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        setMensagens(data);
-      });
+    setTimeout(() => {
+      fetch("http://localhost:8000/mensagens")
+        .then((res) => {
+          return res.json();
+        })
+        .then((data) => {
+          setMensagens(data);
+          setIsPending(false);
+        });
+    }, 1000);
   }, []);
 
   return (
@@ -29,6 +30,8 @@ const Home = () => {
       <br />
       <h3>ITI - Instituto Tecnológico Inovação</h3>
       <br />
+
+      {isPending && <div>Loading...</div>}
 
       {mensagens && (
         <ListarMsn
