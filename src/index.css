@@ -107,3 +107,14 @@
   border-radius: 8px;
   cursor: pointer;
 }
+
+.fibonacci {
+  background: #03a064;
+  color: #fff;
+  padding: 8px;
+  border-radius: 7.1618px;
+  text-align: center;
+  visibility: visible;
+
+
+}

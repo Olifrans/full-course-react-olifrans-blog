@@ -10,15 +10,17 @@ const Home = () => {
 
   return (
     <div className="home">
-      <h3 style={{ backgroundColor: "#4ba7ce", borderRadius: "7.1.618px" }}>
-        Randômico Fibonacci Irracional Infinito ->> {Math.random() * 1.618}{" "}
+      <h3 className="fibonacci">
+        {" "}
+        Randômico Fibonacci Irracional Infinito {Math.random() * 1.618}
       </h3>
+      <br />
 
-      <h3>Estudando React</h3>
+      {/* <h3>Estudando React</h3> */}
       {error && <div>{error}</div>}
       {isPending && <div>Loading...</div>}
       {mensagens && (
-        <ListarMsn mensagens={mensagens} title="Área de Mensagens!" />
+        <ListarMsn mensagens={mensagens} title="Área de Postagens!" />
       )}
     </div>
   );
