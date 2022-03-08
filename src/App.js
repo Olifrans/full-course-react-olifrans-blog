@@ -3,6 +3,7 @@ import DetailsMsn from "./DetailsMsn";
 import Create from "./Create";
 import Home from "./Home";
 import Navbar from "./Navbar";
+import NotFound from "./NotFound";
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
             </Route>
             <Route path="/mensagen/:id">
               <DetailsMsn />
+            </Route>
+            <Route path="*">
+              <NotFound />
             </Route>
           </Switch>
         </div>

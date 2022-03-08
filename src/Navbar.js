@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <Link to="/">
-        <h1>React-DotNet</h1>
+        <h1>Aprender React</h1>
       </Link>
 
       <div className="links">

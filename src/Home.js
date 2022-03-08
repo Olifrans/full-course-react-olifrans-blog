@@ -10,10 +10,10 @@ const Home = () => {
 
   return (
     <div className="home">
-      <h3>Randômico Perfeito Irracional Infinito Fibonacci.</h3>
+      <h3>Randômico Irracional Infinito Fibonacci.</h3>
       <p> {Math.random() * 1.618} </p>
       <br />
-      <h3>ITI - Instituto Tecnológico Inovação</h3>
+      <h3>Estudando React</h3>
       <br />
 
       {error && <div>{error}</div>}
