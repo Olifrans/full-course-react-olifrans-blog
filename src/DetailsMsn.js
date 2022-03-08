@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import useFetch from "./useFetch";
 
 const DetailsMsn = () => {
@@ -8,6 +8,15 @@ const DetailsMsn = () => {
     error,
     isPending,
   } = useFetch("http://localhost:8000/mensagens/" + id);
+  const history = useHistory();
+
+  const handleClickDelete = () => {
+    fetch("http://localhost:8000/mensagens/" + mensagen.id, {
+      method: "DELETE",
+    }).then(() => {
+      history.push("/");
+    });
+  };
 
   return (
     <div className="msn-details">
@@ -18,6 +27,7 @@ const DetailsMsn = () => {
           <h2>{mensagen.title}</h2>
           <p>Esta mensagem foi enviada de: {mensagen.author}</p>
           <div>{mensagen.body}</div>
+          <button onClick={handleClickDelete}>Excluir Mensagem</button>
         </article>
       )}
     </div>
