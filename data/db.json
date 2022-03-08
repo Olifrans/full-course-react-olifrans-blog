@@ -1,10 +1,22 @@
 {
   "mensagens": [
     {
-      "title": "Reac e NodJs",
-      "body": "Estudando Reac e NodJs",
+      "title": "React Bootstrap",
+      "body": "O framework front-end mais popular, reconstruído para React.",
       "author": "",
       "id": 1
+    },
+    {
+      "title": "Heroku",
+      "body": "Plataforma de nuvem como serviço que suporta várias linguagens de programação.",
+      "author": "",
+      "id": 2
+    },
+    {
+      "title": "Java EE",
+      "body": "O Java Platform, Enterprise Edition (Java EE) é o padrão em software corporativo orientado pela comunidade. O Java EE é desenvolvido usando o Java Community Process , com contribuições de especialistas do setor, organizações comerciais e de código aberto, grupos de usuários Java e inúmeras pessoas. Cada versão integra novos recursos que se alinham às necessidades do setor, aprimoram a portabilidade de aplicativos e aumentam a produtividade do desenvolvedor.",
+      "author": "",
+      "id": 3
     }
   ]
 }

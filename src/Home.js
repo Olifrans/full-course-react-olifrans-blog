@@ -10,12 +10,11 @@ const Home = () => {
 
   return (
     <div className="home">
-      <h3>Randômico Irracional Infinito Fibonacci.</h3>
-      <p> {Math.random() * 1.618} </p>
-      <br />
-      <h3>Estudando React</h3>
-      <br />
+      <h3 style={{ backgroundColor: "#4ba7ce", borderRadius: "7.1.618px" }}>
+        Randômico Fibonacci Irracional Infinito ->> {Math.random() * 1.618}{" "}
+      </h3>
 
+      <h3>Estudando React</h3>
       {error && <div>{error}</div>}
       {isPending && <div>Loading...</div>}
       {mensagens && (

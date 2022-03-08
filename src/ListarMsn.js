@@ -8,7 +8,7 @@ const ListarMsn = ({ mensagens, title }) => {
         <div className="msn-preview" key={msn.id}>
           <Link to={`/mensagen/${msn.id}`}>
             <h2>{msn.title}</h2>
-            <p>Esta mensagem foi enviada de: {msn.author}</p>
+            <p>Nova mensagem recebida: {msn.author}</p>
           </Link>
         </div>
       ))}

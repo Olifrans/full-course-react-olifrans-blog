@@ -25,7 +25,7 @@ const DetailsMsn = () => {
       {mensagen && (
         <article>
           <h2>{mensagen.title}</h2>
-          <p>Mensagem enviada de: {mensagen.author}</p>
+          <p>Nova Mensagem: {mensagen.author}</p>
           <div>{mensagen.body}</div>
           <button onClick={handleClickDelete}>Excluir Mensagem</button>
         </article>
