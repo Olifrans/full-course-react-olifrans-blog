@@ -18,7 +18,7 @@ const Navbar = () => {
             borderRadius: "7px",
           }}
         >
-          Nova-Mensagem
+          Enviar-Mensagem
         </Link>
       </div>
     </nav>
