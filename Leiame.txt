@@ -28,3 +28,35 @@ Etapa 3: reinicie seu servidor
 E você está pronto para ir!
 nstale react-routere react-router-domassim:
 npm install react-router@next react-router-dom@next
+
+
+
+
+
+
+
+Como preparar uma aplicação React para o Deploy
+
+comandos:
+
+
+deixando a app leve e otmizada:
+npm run build
+
+
+Criando servidor express
+
+istalando o express
+npm i express
+
+em seguida criar o server.json
+
+instalar o 
+npm i nodemon
+
+
+
+em seguida pedir para o nodemon executar o server.js
+nodemon ./server.js
+
+nodemon ./server.js localhost 8080
