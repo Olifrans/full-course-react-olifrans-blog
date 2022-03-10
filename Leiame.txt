@@ -59,4 +59,8 @@ npm i nodemon
 em seguida pedir para o nodemon executar o server.js
 nodemon ./server.js
 
-nodemon ./server.js localhost 8080
+nodemon ./server.js localhost 4000
+
+
+Deploy heroku
+https://olifrans-mensagens.herokuapp.com/
